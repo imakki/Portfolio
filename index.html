@@ -4,11 +4,16 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta name="keywords" content="css3, html5, js, background video, portfolio, Ankit">
+    <meta name="description" content="Ankit yadav portfolio">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>My Portfolio</title>
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 	<link rel="icon" href="favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bangers" rel="stylesheet">
     <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
@@ -23,39 +28,62 @@
         <div id="mobile-menu-close">
             <span>Close</span> <i class="fa fa-times" aria-hidden="true"></i>
         </div>
-        <ul id="menu" class="shadow">
+        <ul id="menu">
             <li>
-                <a href="#about">About</a>
+                <a href="#about"><strong>About</strong></a>
+            </li>
+            <!--<li>
+                <a href="#experience"><strong>Experience</strong></a>
+            </li>-->
+            <li>
+                <a href="#education"><strong>Education</strong></a>
             </li>
             <li>
-                <a href="#experience">Experience</a>
+                <a href="#projects"><strong>Projects</strong></a>
             </li>
             <li>
-                <a href="#education">Education</a>
+                <a href="#skills"><strong>Skills</strong></a>
             </li>
             <li>
-                <a href="#projects">Projects</a>
-            </li>
-            <li>
-                <a href="#skills">Skills</a>
-            </li>
-            <li>
-                <a href="#contact">Contact</a>
+                <a href="#contact"><strong>Contact</strong></a>
             </li>
         </ul>
     </header>
     <!-- End header -->
-
+    
     <div id="lead">
         <div id="lead-content">
-            <h1>Ryan Fitzgerald</h1>
-            <h2>Software Engineer</h2>
-            <a href="#" class="btn-rounded-white">Download Resume</a>
+            <div>
+            <p class="hello">I'm Ankit.</p>
+        </div>
+         <div id="hello2">I design and I build..<span class="blink">|</span></strong></div>
+            <div class="download-btn">
+            <a href="/resume/Resume.pdf" download="resume.pdf" class="btn-rounded-white">Download Resume</a>
+            </div>
         </div>
         <!-- End #lead-content -->
 
-        <div id="lead-overlay"></div>
+        <div id="lead-overlay">
+            <div id="video-container">
+                  <video id="background_video" loop muted></video>
+                  <div id="video_cover"></div>
+                  <div id="overlay"></div>
 
+                  <div id="video_controls">
+                    <span id="play">
+                      <img src="play.png">
+                    </span>
+                    <span id="pause">
+                      <img src="pause.png">
+                    </span>
+                  </div>
+
+                  <section id="main_content">
+                    <div id="head">
+                    </div>
+                  </section>
+                </div>
+            </div>
         <div id="lead-down">
             <span>
                 <i class="fa fa-chevron-down" aria-hidden="true"></i>
@@ -64,7 +92,7 @@
         <!-- End #lead-down -->
     </div>
     <!-- End #lead -->
-
+    <div id="parent-about">
     <div id="about">
         <div class="container">
             <div class="row">
@@ -81,7 +109,8 @@
             </div>
         </div>
     </div>
-    <!-- End #about -->
+</div>
+    <!-- End #about 
 
     <div id="experience" class="background-alt">
         <h2 class="heading">Experience</h2>
@@ -111,8 +140,8 @@
             </div>
         </div>
     </div>
-    <!-- End #experience -->
-
+     End #experience -->
+ <div>
     <div id="education">
         <h2 class="heading">Education</h2>
         <div class="education-block">
@@ -143,8 +172,9 @@
         </div>
         <!-- End .education-block -->
     </div>
+ </div>
     <!-- End #education -->
-
+    <div>
     <div id="projects" class="background-alt">
         <h2 class="heading">Projects</h2>
         <div class="container">
@@ -183,8 +213,9 @@
             </div>
         </div>
     </div>
+</div>
     <!-- End #projects -->
-
+    <div>
     <div id="skills">
         <h2 class="heading">Skills</h2>
         <ul>
@@ -216,6 +247,7 @@
             <li>Ruby on Rails</li>
         </ul>
     </div>
+</div>
     <!-- End #skills -->
 
     <div id="contact">
@@ -237,7 +269,7 @@
             <div class="row">
                 <div class="col-sm-5 copyright">
                     <p>
-                        Copyright &copy; 2017 YOUR NAME
+                        Copyright &copy; 2018 ANKit
                     </p>
                 </div>
                 <div class="col-sm-2 top">
@@ -269,6 +301,8 @@
     </footer>
     <!-- End footer -->
 
+    <script src="js/bideo.js"></script>
+    <script src="js/main.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/scripts.min.js"></script>
 </body>

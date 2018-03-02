@@ -5,6 +5,13 @@ var sass = require('gulp-sass');
 var wait = require('gulp-wait');
 var rename = require('gulp-rename');
 var autoprefixer = require('gulp-autoprefixer');
+var connect = require('gulp-connect');
+ 
+gulp.task('webserver', function() {
+  connect.server({
+    livereload: true
+  });
+});
 
 gulp.task('scripts', function() {
     return gulp.src('js/scripts.js')
@@ -27,10 +34,19 @@ gulp.task('styles', function () {
     return gulp.src('./scss/styles.scss')
         .pipe(wait(250))
         .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
-        .pipe(gulp.dest('./css'));
+        .pipe(gulp.dest('./css'))
+        .pipe(connect.reload());
 });
+
+gulp.task('html', function() {
+    return gulp.src('./index.html')
+        .pipe(connect.reload());
+})
 
 gulp.task('watch', ['scripts', 'styles'], function() {
     gulp.watch('js/*.js', ['scripts']);
     gulp.watch('scss/*.scss', ['styles']);
+    gulp.watch('index.html', ['html']);
 });
+
+gulp.task('default', ['webserver', 'watch']);
