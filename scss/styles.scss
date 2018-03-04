@@ -42,11 +42,11 @@ $background: #fff;
 $background-alt: #f2f2f5;
 
 // Define border colors
-$border: #dcd9d9;
+$border: #fff;
 
 // Define text colors
 $heading: #0c374d;
-$text: #0d3d56;
+$text: #fff;
 
 /*
     ---------------------
@@ -246,10 +246,14 @@ header {
 /*name*/
 p.hello {
   color: #fff;
-  font-family: 'Titillium Web', sans-serif;
-  font-size: 100px;
-  opacity: 1;
+  background: -webkit-linear-gradient(#8e0e00, #1f1c18);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: 'Bangers', cursive;
+  font-size: 10em;
+  opacity: 0.5;
   margin: 0px 0 0 10px;
+  margin-top: 60px;
   white-space: nowrap;
   overflow: hidden;
   width: 30em;
@@ -261,6 +265,20 @@ p.hello {
     color: lime;
     text-decoration: none;
   }
+}   
+
+#job {
+
+    p {
+        font-family: 'Bangers', cursive;
+        color: #fff;
+        background: -webkit-linear-gradient(#8e0e00, #1f1c18);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size:  45px;
+        margin-top: 0px;
+        opacity: 0.5;
+    }
 }
 
 span.blink {
@@ -429,6 +447,7 @@ body {
 
 footer {
     padding: 50px 0;
+    background: #141414;
 }
 
 .copyright {
@@ -641,11 +660,15 @@ footer {
     padding: 75px 15px;
     border-bottom: 1px solid $border;
 
-    h2 {
+    p.head {
         color: #fff;
         margin: 50px 0 30px 0;
-        font-size: 3em;
+        font-size: 4em;
         font-family: 'Bangers', cursive;
+        background: -webkit-linear-gradient(#8e0e00, #1f1c18);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        border: 0px;
     }
 
     h2.heading:after {
@@ -653,6 +676,7 @@ footer {
     }
 
     p {
+        background: #86c232;
         color: #fff;
         margin: 5px;
         border: 4px solid #fff;
@@ -662,7 +686,7 @@ footer {
 }
 
 #parent-about {
-    background: #44318d;
+    background: #141414;
 }
 
 /*
@@ -781,8 +805,12 @@ footer {
     ----- 7. Education Styles -----
     -------------------------------
 */
-
-#education {
+.parent-education {
+    
+    background: #000;
+    margin : -1px;
+    
+    #education {
     padding: 50px 15px 20px 15px;
     border-bottom: 1px solid $border;
     text-align: center;
@@ -791,14 +819,30 @@ footer {
         color: $heading;
         margin-bottom: 50px;
     }
+
+    .head {
+        font-family:'Bangers', cursive;
+        font-size: 4em;
+        color: #fff;
+        margin-bottom: 20px;
+        margin-top: 0px;
+        background: -webkit-linear-gradient(#8e0e00, #1f1c18);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
 }
 
+
+
 .education-block {
-    max-width: 700px;
+    max-width: 700px;   
     margin: 0 auto 30px auto;
     padding: 15px;
-    border: 1px solid $border;
+    border: 4px solid $border;
     text-align: left;
+    border-radius: 12px;
+    background: #86c232;
 
     h3 {
         font-weight: 500;
@@ -808,12 +852,12 @@ footer {
     }
 
     span {
-        color: $text;
+        color: #fff;
         float: right;
     }
 
     h4 {
-        color: $text;
+        color: #fff;
         clear: both;
         font-weight: 500;
         margin: 0 0 15px 0;
@@ -821,7 +865,7 @@ footer {
 
     p, ul {
         margin: 0;
-        color: $text;
+        color: #fff;
         font-size: 0.9em;
     }
 
@@ -829,14 +873,16 @@ footer {
         padding: 0 0 0 15px;
     }
 }
-
+}
 /*
     -------------------------------
     ----- 8. Project Styles -----
     -------------------------------
 */
+#parent-projects{
+    background: #1f1f1f;    
 
-#projects {
+.projects {
     padding: 50px 15px;
     border-bottom: 1px solid $border;
     text-align: center;
@@ -845,6 +891,17 @@ footer {
         color: $heading;
         margin-bottom: 50px;
     }
+}
+
+p.head{
+    font-family: 'Bangers', cursive;
+    font-size: 4em;
+    margin-top: 0px;
+    margin-bottom: 15px;
+    color: #fff;
+    background: -webkit-linear-gradient(#8e0e00, #1f1c18);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .project {
@@ -893,6 +950,7 @@ footer {
 #more-projects {
     display: none;
 }
+}
 
 /*
     -------------------------------
@@ -903,10 +961,21 @@ footer {
 #skills {
     padding: 50px 15px;
     text-align: center;
+    background: #292929;
+    margin-top: -1px;
 
-    h2 {
-        color: $heading;
-        margin-bottom: 50px;
+    p.heading {
+        font-family: 'Bangers', cursive;
+        color: #fff;
+        margin-bottom: 25fpx;
+        font-size: 4em;
+        background: -webkit-linear-gradient(#8e0e00, #1f1c18);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    p.heading:after {
+        background: none;
     }
 
     ul {
@@ -936,13 +1005,18 @@ footer {
 
 #contact {
     padding: 50px 15px;
-    background: $base-color;
+    background: #0a0a0a;
     text-align: center;
 
-    h2 {
-        margin: 0 0 15px 0;
+    p{
+        font-family: 'Bangers', cursive;
+        font-size: 4em;
         color: #fff;
-        font-weight: 500;
+        margin-top: 0px;
+        margin-bottom: 30px;
+        background: -webkit-linear-gradient(#8e0e00, #1f1c18);
+        -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
     }
 }
 
