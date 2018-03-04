@@ -140,6 +140,16 @@ body {
   }
 }
 
+//parallax
+
+.parallax {
+    position: fixed;
+    top: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
 header {
     position: absolute;
     top: 0;
@@ -447,7 +457,7 @@ body {
 
 footer {
     padding: 50px 0;
-    background: #141414;
+    background: transparent;
 }
 
 .copyright {
@@ -658,8 +668,7 @@ footer {
 
 #about {
     padding: 75px 15px;
-    border-bottom: 1px solid $border;
-
+    
     p.head {
         color: #fff;
         margin: 50px 0 30px 0;
@@ -686,7 +695,7 @@ footer {
 }
 
 #parent-about {
-    background: #141414;
+    background: transparent;
 }
 
 /*
@@ -807,12 +816,10 @@ footer {
 */
 .parent-education {
     
-    background: #000;
-    margin : -1px;
-    
+    background: transparent;
+
     #education {
     padding: 50px 15px 20px 15px;
-    border-bottom: 1px solid $border;
     text-align: center;
 
     h2 {
@@ -880,11 +887,10 @@ footer {
     -------------------------------
 */
 #parent-projects{
-    background: #1f1f1f;    
+    background: transparent;    
 
 .projects {
     padding: 50px 15px;
-    border-bottom: 1px solid $border;
     text-align: center;
 
     h2 {
@@ -961,7 +967,7 @@ p.head{
 #skills {
     padding: 50px 15px;
     text-align: center;
-    background: #292929;
+    background: transparent;
     margin-top: -1px;
 
     p.heading {
@@ -1005,7 +1011,7 @@ p.head{
 
 #contact {
     padding: 50px 15px;
-    background: #0a0a0a;
+    background: transparent;
     text-align: center;
 
     p{
