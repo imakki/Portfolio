@@ -25,10 +25,6 @@
         src: '/assets/night.mp4',
         type: 'video/mp4'
       },
-      {
-        src: 'night.webm',
-        type: 'video/webm;codecs="vp8, vorbis"'
-      }
     ],
 
     // What to do once video loads (initial frame)
